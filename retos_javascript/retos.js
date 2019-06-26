@@ -660,53 +660,112 @@ chainToSwitch(7);
 
 
 
-// reto 77,
+// reto 77, Devolviendo valores booleanos desde funciones
+
+function isLess(a, b) {
+  // Fix this code
+  return a <= b;
+}
+// Change these values to test
+isLess(10, 15);
+
+
+// reto 78, regresa el patrón inicial para funciones
+
+// Setup
+function abTest(a, b) {
+  // Only change code below this line
+  if (a < 0 || b < 0){
+
+    return undefined
+  }
+  
+  
+  // Only change code above this line
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+// Change values below to test your code
+abTest(2,2);
+
+
+
+// reto 79, regresa el patrón inicial para funciones
+
+function cc(card) {
+  // Only change code below this line
+  var regex = /[JQKA]/;
+  if (card > 1 && card < 7){count++;}
+  else if (card === 10 || String(card).match(regex)){count--;}
+
+  if (count > 0) return count + " Bet";
+  return count + " Hold";
+
+  // Only change code above this line
+}
+
+
+// reto 80, Construye objetos JavaScript
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+// Only change code below this line.
+
+var myDog = {
+  "name": "pachito",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+  };
+
+
+// reto 81,
 
 
 
 
-// reto 78,
+// reto 82,
+
+
+
+
+// reto 83,
+
+
+
+
+// reto 84,
 
 
 
 
 
-// reto 79,
+// reto 85,
 
 
 
 
-// reto 80,
+// reto 86,
 
 
 
-
-
-// reto 62,
-
+// reto 87,
 
 
 
-// reto 62,
+// reto 88,
 
 
 
-
-
-// reto 62,
-
+// reto 89,
 
 
 
-// reto 62,
-
-
-
-
-
-// reto 62,
-
-
-
-
-// reto 62,
+// reto 90,

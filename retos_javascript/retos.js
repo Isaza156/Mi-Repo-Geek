@@ -726,46 +726,558 @@ var myDog = {
   };
 
 
-// reto 81,
+// reto 81, acceso a propiedades de objetos con notación de puntos
+
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+// Only change code below this line
+
+var hatValue = testObj.hat;      // Change this line
+var shirtValue = testObj.shirt;    // Change this line
+
+
+// reto 82, acceso a propiedades de objetos con notación de corchete
+
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+// Only change code below this line
+
+var entreeValue = testObj["an entree"];   // Change this line
+var drinkValue = testObj["the drink"];    // Change this line
+
+
+// reto 83, acceso a propiedades de objetos con variables
+
+// Setup
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line;
+
+var playerNumber = 16;       // Change this Line
+var player = testObj[playerNumber];   // Change this Line
+
+
+// reto 84, actualizando las propiedades del objeto
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+ourDog.name = "Happy Camper";
+
+// Setup
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line.
+
+myDog.name = "Happy Coder"; // Solution
 
 
 
+// reto 85, Agregar nuevas propiedades a un objeto JavaScript
 
-// reto 82,
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
 
+ourDog.bark = "bow-wow";
 
+// Setup
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
 
+// Only change code below this line.
 
-// reto 83,
-
-
-
-
-// reto 84,
-
-
-
-
-
-// reto 85,
-
-
-
-
-// reto 86,
-
-
-
-// reto 87,
+myDog.bark = "woof";
 
 
+// reto 86, eliminar propiedades de un objeto JavaScript
 
-// reto 88,
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"],
+  "bark": "bow-wow"
+};
+
+delete ourDog.bark;
+
+// Setup
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+// Only change code below this line.
+
+delete myDog.tails;
 
 
+// reto 87, Uso de objetos para búsquedas
 
-// reto 89,
+// Setup
+function phoneticLookup(val) {
+  var result = "";
+
+  // Only change code below this line
+    var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  } 
+  result = lookup[val];
 
 
+  // Only change code above this line
+  return result;
+}
 
-// reto 90,
+// Change this value to test
+phoneticLookup("charlie");
+
+// reto 88, Prueba de objetos para propiedades
+
+// Setup
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+  // Your Code Here
+  if (myObj.hasOwnProperty(checkProp) == true) {
+    return myObj[checkProp];
+  }
+  else {
+      return "Not Found"
+  }
+}
+// Test your code by modifying these values
+checkObj("gift");
+
+// reto 89, manipulando objetos complejos
+
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [ 
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  // Add record here
+  {
+    "artist": "Deep Purple",
+    "title": "Smoke on the water",
+    "release_year": 1976,
+    "formats": [ 
+      "CD",
+      "8T",
+      "LP"
+    ],
+  }
+ ];
+
+// reto 91, acceso a objetos anidados
+
+// Setup
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"] // Change this line
+
+
+// reto 92, accediendo a matrices anidadas
+
+// Setup
+var myPlants = [
+  { 
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }  
+];
+
+// Only change code below this line
+
+var secondTree = myPlants[1].list[1];
+
+
+// reto 93, colección de discos
+
+
+// Setup
+var collection = {
+  "2548": {
+    "album": "Slippery When Wet",
+    "artist": "Bon Jovi",
+    "tracks": [ 
+      "Let It Rock", 
+      "You Give Love a Bad Name" 
+    ]
+  },
+  "2468": {
+    "album": "1999",
+    "artist": "Prince",
+    "tracks": [ 
+      "1999", 
+      "Little Red Corvette" 
+    ]
+  },
+  "1245": {
+    "artist": "Robert Palmer",
+    "tracks": [ ]
+  },
+  "5439": {
+    "album": "ABBA Gold"
+  }
+};
+// Keep a copy of the collection for tests
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+// Only change code below this line
+function updateRecords(id, prop, value) {
+if (prop === "tracks" && value !== "") {
+ if(collection[id][prop]) {
+  collection[id][prop].push(value);
+ }
+ else {
+  collection[id][prop]=[value];
+ }
+} else if (value !== "") {
+  collection[id][prop] = value;
+} else {
+  delete collection[id][prop];
+}
+
+return collection;
+}
+
+// Alter values below to test your code
+updateRecords(5439, "artist", "ABBA");
+
+ 
+// reto 94, Iterar con JavaScript Mientras Bucles
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+var i = 0;
+while(i < 5) {
+  myArray.push(i);
+  i++;
+}
+
+
+// reto 95, Iterar con JavaScript para bucles
+
+// Example
+var ourArray = [];
+
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+
+for (var i = 1; i < 6; i++) {
+  myArray.push(i);
+}
+
+
+// reto 96, Iterar números impares con un bucle for
+
+// Example
+var ourArray = [];
+
+for (var i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+
+
+for (var i = 1; i < 10; i += 2) {
+  myArray.push(i);
+}
+
+
+// reto 97, contar hacia atrás con un bucle for
+
+// Example
+var ourArray = [];
+
+for (var i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+}
+
+// Setup
+var myArray = [];
+
+// Only change code below this line.
+
+for (var i = 9; i > 0; i -= 2) {
+  myArray.push(i);
+}
+
+
+// reto 98, iterar a través de una matriz con un bucle For
+
+// Example
+var ourArr = [ 9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++) {
+  ourTotal += ourArr[i];
+}
+
+// Setup
+var myArr = [ 2, 3, 4, 5, 6];
+
+// Only change code below this line
+
+var total = 0;
+
+for (var i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+
+
+// reto 99, anidando para bucles
+
+
+function multiplyAll(arr) {
+  var product = 1;
+  // Only change code below this line
+  for(var i=0; i < arr.length; i++){
+    for (var j=0; j < arr[i].length; j++){
+      product = product * arr[i][j];
+    }
+  }
+  // Only change code above this line
+  return product;
+}
+
+// Modify values below to test your code
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+
+// reto 100, Iterate con JavaScript Do ... While Loops
+
+// Setup
+var myArray = [];
+var i = 10;
+
+// Only change code below this line.
+do{
+myArray.push(i);
+i++;
+
+
+} while (i < 10)
+
+
+// reto 101, Búsqueda de perfiles
+
+//Setup
+var contacts = [
+  {
+      "firstName": "Akira",
+      "lastName": "Laine",
+      "number": "0543236543",
+      "likes": ["Pizza", "Coding", "Brownie Points"]
+  },
+  {
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "number": "0994372684",
+      "likes": ["Hogwarts", "Magic", "Hagrid"]
+  },
+  {
+      "firstName": "Sherlock",
+      "lastName": "Holmes",
+      "number": "0487345643",
+      "likes": ["Intriguing Cases", "Violin"]
+  },
+  {
+      "firstName": "Kristian",
+      "lastName": "Vos",
+      "number": "unknown",
+      "likes": ["JavaScript", "Gaming", "Foxes"]
+  }
+];
+
+
+function lookUpProfile(name, prop){
+// Only change code below this line
+for (var x = 0; x < contacts.length; x++){
+  if (contacts[x].firstName === name) {
+      if (contacts[x].hasOwnProperty(prop)) {
+          return contacts[x][prop];
+      } else {
+          return "No such property";
+      }
+  }
+}
+return "No such contact";
+// Only change code above this line
+}
+
+// Change these values to test your function
+lookUpProfile("Akira", "likes");
+
+
+// reto 102, generar fracciones aleatorias con JavaScript
+
+function randomFraction() {
+  // Only change code below this line.
+  var result = 0;
+  
+  while (result === 0) {
+    result = Math.random();
+  }
+
+  return result;  
+  // Only change code above this line.
+}
+
+// reto 103, generar números enteros aleatorios con JavaScript
+
+var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+
+function randomWholeNum() {
+
+  // Only change code below this line.
+
+  return Math.floor(Math.random() * 10);
+}
+
+// reto 104, generar números enteros aleatorios dentro de un rango
+
+// Example
+function ourRandomRange(ourMin, ourMax) {
+
+  return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+
+ourRandomRange(1, 9);
+
+// Only change code below this line.
+
+function randomRange(myMin, myMax) {
+
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin; // Change this line
+
+}
+
+// Change these values to test your function
+var myRandom = randomRange(5, 15);
+
+ 
+// reto 105, usar la función parseInt
+
+function convertToInteger(str) {
+  return parseInt(str);
+}
+
+convertToInteger("56");
+
+
+// reto 106, use la función parseInt con un Radix
+
+function convertToInteger(str) {
+  var radix = 2;
+return parseInt(str, radix);
+}
+
+convertToInteger("10011");
+
+// reto 107, utilizar el operador condicional (ternario)
+
+function checkEqual(a, b) {
+  return (a == b ? true : false);
+}
+
+checkEqual(1, 2);
+
+
+// reto 108,
+
+function checkSign(num) {
+  return (num > 0) ? "positive" : (num < 0) ? "negative" : "zero";
+}
+
+checkSign(10);
+
+
+// FIN !!
+
